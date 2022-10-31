@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
+import { ChainId, Weiweb3Provider } from "@weiweb3/react";
 import "../styles/globals.css";
 
 // This is the chainId your dApp will work on.
@@ -7,9 +7,9 @@ const activeChainId = ChainId.Mainnet;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider desiredChainId={activeChainId}>
+    <Weiweb3Provider desiredChainId={activeChainId}>
       <Component {...pageProps} />
-    </ThirdwebProvider>
+    </Weiweb3Provider>
   );
 }
 
